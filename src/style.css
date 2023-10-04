@@ -1,3 +1,59 @@
+/* ## Colors
+
+### Primary
+
+- Blue: hsl(246, 80%, 60%)
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+
+### Neutral
+
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px (card titles e.g. Work, Play)
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 300, 400, 500
+ */
+:root {
+  /* work */
+  --light-red: hsl(15, 100%, 70%);
+
+  /* play */
+  --soft-blue: hsl(195, 74%, 62%);
+
+  /* study */
+  --light-red: hsl(348, 100%, 68%);
+
+  /* exercise */
+  --lime-green: hsl(145, 58%, 55%);
+
+  /* social */
+  --violet: hsl(264, 64%, 52%);
+
+  /* self care */
+  --soft-orange: hsl(43, 84%, 65%);
+
+  --blue: hsl(246, 80%, 60%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
 /*Setting to zero*/
 * {
   padding: 0;
@@ -80,8 +136,9 @@ p {
 body {
   display: flex;
   flex-direction: column;
-  background-color: black;
-  color: aliceblue;
+  background-color: var(--very-dark-blue);
+  color: white;
+  font-family: "Rubik", sans-serif;
 }
 main {
   flex: 1 1 auto;
@@ -98,36 +155,26 @@ main {
   padding: 0 15px;
 }
 
-.section {
+.user-section {
   margin: 0 20px 20px 0;
-  padding: 20px;
+  width: 220px;
   border: 2px solid gray;
   border-radius: 15px;
+  background-color: var(--dark-blue);
+  overflow: hidden;
 }
-.report {
-  margin-top: 30px;
+.user {
+  padding: 28px;
+  background-color: var(--blue);
+  border-radius: 15px;
 }
-.user-name {
-}
-.ellipsis {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.ellipsis img:hover,
-.ellipsis img:active {
-  cursor: pointer;
-}
-
 /* for responsive images */
 .image {
   flex: 0 0 33.3333%;
-  min-height: 50px;
+  min-height: 70px;
   overflow: hidden;
   position: relative;
 }
-
 .image img {
   width: auto;
   height: 100%;
@@ -138,6 +185,55 @@ main {
   position: absolute;
   top: 0;
   left: 0;
+}
+.report {
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--pale-blue);
+}
+.user-name {
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 300;
+}
+
+.section {
+  margin: 0 20px 20px 0;
+  padding: 28px;
+  width: 250px;
+  border: 2px solid gray;
+  border-radius: 15px;
+  background-color: var(--dark-blue);
+  transition: all 0.5s ease;
+}
+.section:hover,
+.section:active {
+  background-color: hsl(235, 46%, 33%);
+}
+.ellipsis {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.ellipsis h6 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.ellipsis img:hover,
+.ellipsis img:active {
+  cursor: pointer;
+}
+.hrs {
+  margin: 20px 0 10px 0;
+  font-size: 56px;
+  font-weight: 300;
+}
+.last-week {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--pale-blue);
 }
 
 @media screen and (max-width: 1200px) {
