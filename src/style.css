@@ -69,7 +69,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
+  margin: 0;
   font-size: inherit;
   font-weight: inherit;
 }
@@ -78,6 +80,8 @@ h6 {
 body {
   display: flex;
   flex-direction: column;
+  background-color: black;
+  color: aliceblue;
 }
 main {
   flex: 1 1 auto;
@@ -99,6 +103,41 @@ main {
   padding: 20px;
   border: 2px solid gray;
   border-radius: 15px;
+}
+.report {
+  margin-top: 30px;
+}
+.user-name {
+}
+.ellipsis {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.ellipsis img:hover,
+.ellipsis img:active {
+  cursor: pointer;
+}
+
+/* for responsive images */
+.image {
+  flex: 0 0 33.3333%;
+  min-height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image img {
+  width: auto;
+  height: 100%;
+  border: 2px solid wheat;
+  border-radius: 50px;
+  object-fit: contain;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media screen and (max-width: 1200px) {
