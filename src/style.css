@@ -161,7 +161,6 @@ main {
   flex-direction: column;
   flex-wrap: wrap;
   width: 230px;
-  border: 2px solid gray;
   border-radius: 15px;
   background-color: var(--dark-blue);
   overflow: hidden;
@@ -289,7 +288,6 @@ main {
 .section {
   padding: 31px;
   width: 250px;
-  border: 2px solid gray;
   border-radius: 15px;
   background-color: var(--dark-blue);
   position: relative;
@@ -409,5 +407,5 @@ main {
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color:var(--soft-orange);
 }
