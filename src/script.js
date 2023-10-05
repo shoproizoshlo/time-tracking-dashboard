@@ -1,16 +1,27 @@
 fetch("./src/data.json")
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
+    data.forEach((item, index) => {
+      //   console.log(item);
+      if (item.title === "Work") {
+        console.log("piska");
+        console.log(item.timeframes.daily.current);
+        console.log(item.timeframes.daily.previous);
+      }
+    });
   })
   .catch((error) => console.error("Error loading data:", error));
 
-document.getElementById("daily").addEventListener("click", () => {
-  console.log("hello");
-});
+const periodRanges = document.querySelectorAll(".period-range");
 
-document.querySelectorAll(".period-range").forEach((period) => {
+periodRanges.forEach((period) => {
   period.addEventListener("click", () => {
-    period.classList.toggle("active");
+    // Remove the "active" class from all elements
+    periodRanges.forEach((element) => {
+      element.classList.remove("active");
+    });
+
+    // Add the "active" class to the clicked element
+    period.classList.add("active");
   });
 });
