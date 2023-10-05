@@ -157,21 +157,30 @@ main {
 
 .user-section {
   margin: 0 20px 30px 0;
-  width: 220px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 230px;
   border: 2px solid gray;
   border-radius: 15px;
   background-color: var(--dark-blue);
   overflow: hidden;
 }
+
 .user {
-  padding: 31px;
+  flex: 3.5;
+  padding: 40px 31px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   background-color: var(--blue);
   border-radius: 15px;
 }
 /* for responsive images */
 .image {
-  flex: 0 0 33.3333%;
-  min-height: 70px;
+  /* flex: 0 0 33.3333%; */
+  min-height: 75px;
   overflow: hidden;
   position: relative;
 }
@@ -186,14 +195,17 @@ main {
   top: 0;
   left: 0;
 }
+.user-report {
+  margin-top: 40px;
+}
 .report {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   font-size: 15px;
   font-weight: 300;
   color: var(--pale-blue);
 }
 .user-name {
-  padding-bottom: 80px;
+  /* padding-bottom: 80px; */
   font-size: 38px;
   line-height: 44px;
   font-weight: 300;
@@ -217,6 +229,9 @@ main {
 .period p:hover,
 .period p:active {
   cursor: pointer;
+  color: white;
+}
+.active {
   color: white;
 }
 
@@ -299,6 +314,10 @@ main {
 .ellipsis img:active {
   cursor: pointer;
 }
+.period-section {
+  display: flex;
+  flex-direction: column;
+}
 .hrs {
   margin: 30px 0 15px 0;
   font-size: 56px;
@@ -323,8 +342,65 @@ main {
 @media screen and (max-width: 767px) {
   .container {
     max-width: none;
-    padding: 0 30px;
+    padding: 0 20px;
     margin: 0;
+  }
+  .user-section {
+    margin: 20px 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .user {
+    /* flex: 3.5; */
+    /* padding: 40px 31px; */
+    /* display: flex; */
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    /* background-color: var(--blue); */
+    /* border-radius: 15px; */
+  }
+  .user-name {
+    font-size: 25px;
+  }
+  .user-report {
+    margin-top: 0;
+    margin-left: 15px;
+  }
+
+  .section {
+    width: 100%;
+  }
+  .card-type {
+    margin: 0;
+  }
+  .image {
+    min-width: 75px;
+  }
+  .period-section {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hrs {
+    margin: 0;
+    font-size: 31px;
+  }
+  .period {
+    margin: 31px;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 80%;
+  }
+  .period p {
+    padding-bottom: 0;
   }
 }
 /* footer */
