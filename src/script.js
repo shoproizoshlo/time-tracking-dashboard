@@ -38,13 +38,15 @@ periodRanges.forEach((period) => {
     const selectedPeriod = period.id;
 
     //   change name of the period
-    if (selectedPeriod === "daily") {
-      lastPeriod.textContent = `Day`;
-    } else if (selectedPeriod === "weekly") {
-      lastPeriod.textContent = `Week`;
-    } else if (selectedPeriod === "monthly") {
-      lastPeriod.textContent = `Month`;
-    }
+    lastPeriod.forEach((period) => {
+      if (selectedPeriod === "daily") {
+        period.textContent = `Day`;
+      } else if (selectedPeriod === "weekly") {
+        period.textContent = `Week`;
+      } else if (selectedPeriod === "monthly") {
+        period.textContent = `Month`;
+      }
+    });
 
     cardTypes.forEach((card) => {
       const cardId = card.id;
