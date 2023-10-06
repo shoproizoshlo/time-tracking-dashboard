@@ -55,15 +55,12 @@ periodRanges.forEach((period) => {
   });
 });
 
-const initPage = () => {
-  // Add the "active" class to the clicked element
-  const selectedPeriod = periodRanges[1];
-  selectedPeriod.classList.add("active");
+// default settings when page loaded
+// Add the "active" class to the clicked element
+const selectedPeriod = periodRanges[1];
+selectedPeriod.classList.add("active");
 
-  cardTypes.forEach((card) => {
-    const cardId = card.id;
-    updateCardData("weekly", cardId);
-  });
-};
-
-initPage();
+cardTypes.forEach((card) => {
+  const cardId = card.id;
+  updateCardData("weekly", cardId);
+});
