@@ -51,7 +51,7 @@
 // });
 
 const periodRanges = document.querySelectorAll(".period-range");
-const lastWeekHours = document.querySelectorAll(".last-week");
+const lastWeekHours = document.querySelectorAll(".last-week-hours");
 const cardTypes = document.querySelectorAll(".card-type");
 
 const fetchData = async () => {
